@@ -259,12 +259,6 @@ h1, h2, h3, h4, h5, h6 {
         flex-direction: column;
         align-items: center;
     }
-    table {
-    width: 100%;
-    border-collapse: collapse;
-    margin: 2rem 0;
-    animation: backgroundAnimation 5s infinite;
-}
 
 table, th, td {
     border: 1px solid #ddd;
@@ -277,6 +271,7 @@ th, td {
 
 th {
     background-color: #f4f4f4;
+}
 }
 
 tr:nth-child(even) {
