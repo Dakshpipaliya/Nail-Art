@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Packages - Nail Art Company</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <img src="sami.png" alt="Sami's Nail Salon Logo" class="logo">
+        <h1>SAMI'S NAIL SALON</h1>
+        <nav>
+            <ul>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h2>Nail Art Price Packages</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Package</th>
+                        <th>Price (INR)</th>
+                        <th>Apply Now</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Basic</td>
+                        <td>₹200 - ₹1500</td>
+                        <td>
+                            <form class="applyForm">
+                                <input type="text" name="name" placeholder="Name" required>
+                                <input type="email" name="email" placeholder="Email" required>
+                                <button type="submit">Apply</button>
+                            </form>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Deluxe</td>
+                        <td>₹1500 -₹3000</td>
+                        <td>
+                            <form class="applyForm">
+                                <input type="text" name="name" placeholder="Name" required>
+                                <input type="email" name="email" placeholder="Email" required>
+                                <button type="submit">Apply</button>
+                            </form>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Premium</td>
+                        <td>₹3000 - ₹7000</td>
+                        <td>
+                            <form class="applyForm">
+                                <input type="text" name="name" placeholder="Name" required>
+                                <input type="email" name="email" placeholder="Email" required>
+                                <button type="submit">Apply</button>
+                            </form>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+        <section>
+            <h2>Contact Us</h2>
+            <form id="contactForm">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required></textarea>
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+    </main>
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            var name = document.getElementById('name').value;
+            var email = document.getElementById('email').value;
+            var message = document.getElementById('message').value;
+            if (name && email && message) {
+                alert('Form submitted successfully!');
+            } else {
+                alert('Please fill out all fields.');
+            }
+        });
+
+        document.querySelectorAll('.applyForm').forEach(function(form) {
+            form.addEventListener('submit', function(event) {
+                event.preventDefault();
+                var name = form.querySelector('input[name="name"]').value;
+                var email = form.querySelector('input[name="email"]').value;
+                if (name && email) {
+                    alert('Application submitted successfully!');
+                } else {
+                    alert('Please fill out all fields.');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
