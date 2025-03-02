@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment - Nail Art Company</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <img src="sami.png" alt="Sami's Nail Salon Logo" class="logo">
+        <h1>SAMI'S NAIL SALON</h1>
+    </header>
+    <section>
+        <h2>Payment Form</h2>
+        <form>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="total-amount">Total Amount:</label>
+            <input type="text" id="total-amount" name="total-amount" required>
+            <label for="payment-method">Payment Method:</label>
+            <select id="payment-method" name="payment-method" required>
+                <option value="credit-card">Credit Card</option>
+                <option value="debit-card">Debit Card</option>
+                <option value="paypal">PayPal</option>
+            </select>
+            
+            <button type="submit">Submit</button>
+        </form>
+    </section>
+</body>
+</html>
